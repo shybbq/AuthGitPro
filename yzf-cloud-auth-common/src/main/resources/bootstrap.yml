@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: yzf-cloud-auth-common
+#  datasource:
+#    username: root
+#    password: root
+#    url: jdbc:mysql://localhost:3306/authPro?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    driverClassName: com.mysql.jdbc.Driver
+#  jpa:
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: update
+
+server:
+  port: 7002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://yzf:123456@localhost:7001/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+    prefer-ip-address: true
